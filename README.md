@@ -1,4 +1,4 @@
-# 📅 API de Reservas de Zonas Comunes
+# 📅 API ReservAPP
 
 Esta es una API REST construida con **Node.js + Express** que permite realizar reservas de zonas comunes en una unidad residencial. Las reservas se almacenan en un archivo local en formato JSON.
 
@@ -18,7 +18,7 @@ Esta es una API REST construida con **Node.js + Express** que permite realizar r
 Primero, clona el repositorio y accede a la carpeta del proyecto:
 
 ```bash
-git clone https://github.com/tu-usuario/reservas-api.git
+git clone https://github.com/JDiegx/reserv-app-api.git
 cd reservas-api
 ```
 
