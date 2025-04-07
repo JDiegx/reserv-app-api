@@ -1,4 +1,4 @@
-# 📅 API de Reservas de Zonas Comunes
+# 📅 API de Reserv-APP
 
 Esta es una API REST construida con **Node.js + Express** que permite realizar reservas de zonas comunes en una unidad residencial. Las reservas se almacenan en un archivo local en formato JSON.
 
