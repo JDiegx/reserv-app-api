@@ -146,4 +146,4 @@ Puedes probar los endpoints utilizando herramientas como:
 
 ## 📬 Contacto
 
-¿Tienes dudas o sugerencias? Escríbeme a: `tu-email@ejemplo.com`
+¿Tienes dudas o sugerencias? Escríbeme a: `juandiegosanchex21@gmai.com`
