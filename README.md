@@ -20,48 +20,55 @@ Primero, clona el repositorio y accede a la carpeta del proyecto:
 ```bash
 git clone https://github.com/tu-usuario/reservas-api.git
 cd reservas-api
-2. Instalar dependencias
+```
+
+### 2. Instalar dependencias
+
 Dentro del proyecto, instala las dependencias necesarias:
 
-bash
-Copiar
-Editar
+```bash
 npm install
-3. Crear carpeta y archivo para las reservas
-Dentro del proyecto, crea manualmente una carpeta llamada data. Luego, dentro de esa carpeta, crea un archivo llamado reservations.json.
+```
 
-Asegúrate de que el archivo contenga un arreglo vacío ([]), así:
+### 3. Crear carpeta y archivo para las reservas
 
-data/reservations.json:
+Dentro del proyecto, **crea manualmente una carpeta llamada `data`**. Luego, dentro de esa carpeta, **crea un archivo llamado `reservations.json`**.
 
-json
-Copiar
-Editar
+Asegúrate de que el archivo contenga un arreglo vacío (`[]`), así:
+
+**`data/reservations.json`**:
+```json
 []
+```
+
 Este archivo será donde se guardarán todas las reservas.
 
-▶️ Ejecutar la API localmente
+---
+
+## ▶️ Ejecutar la API localmente
+
 Una vez hayas creado el archivo correctamente, puedes iniciar la API con:
 
-bash
-Copiar
-Editar
+```bash
 node index.js
+```
+
 La API estará disponible en:
 
-arduino
-Copiar
-Editar
+```
 http://localhost:3000
-🧠 Endpoints disponibles
-🔹 Crear una reserva
-POST /reservar
+```
 
-Cuerpo (body) en formato JSON:
+---
 
-json
-Copiar
-Editar
+## 🧠 Endpoints disponibles
+
+### 🔹 Crear una reserva
+
+**POST** `/reservar`
+
+**Cuerpo (body)** en formato JSON:
+```json
 {
   "zona": "Piscina",
   "dia": "2025-04-10",
@@ -70,47 +77,50 @@ Editar
   "contacto": "3001234567",
   "email": "juan@example.com"
 }
-Respuestas posibles:
+```
 
-201 Created: Reserva realizada con éxito.
+**Respuestas posibles**:
+- `201 Created`: Reserva realizada con éxito.
+- `400 Bad Request`: Faltan datos requeridos.
+- `409 Conflict`: El horario ya ha sido reservado.
 
-400 Bad Request: Faltan datos requeridos.
+---
 
-409 Conflict: El horario ya ha sido reservado.
+### 🔹 Consultar disponibilidad
 
-🔹 Consultar disponibilidad
-GET /disponibilidad/:zona/:dia
+**GET** `/disponibilidad/:zona/:dia`
 
-Ejemplo:
-
-bash
-Copiar
-Editar
+**Ejemplo**:
+```
 /disponibilidad/Piscina/2025-04-10
-Respuesta:
+```
 
-json
-Copiar
-Editar
+**Respuesta**:
+```json
 {
   "dia": "2025-04-10",
   "zona": "Piscina",
   "ocupados": ["10:00", "11:00"]
 }
-🛑 Evita subir archivos de datos al repositorio
-Agrega la carpeta data/ al archivo .gitignore para que no se suba al repositorio:
+```
 
-.gitignore
+---
 
-kotlin
-Copiar
-Editar
+## 🛑 Evita subir archivos de datos al repositorio
+
+Agrega la carpeta `data/` al archivo `.gitignore` para que no se suba al repositorio:
+
+**`.gitignore`**
+```
 node_modules/
 data/
-📁 Estructura del proyecto recomendada
-pgsql
-Copiar
-Editar
+```
+
+---
+
+## 📁 Estructura del proyecto recomendada
+
+```
 reservas-api/
 │
 ├── data/
@@ -118,17 +128,22 @@ reservas-api/
 ├── index.js
 ├── package.json
 └── .gitignore
-(Opcionalmente puedes modularizar más adelante en carpetas como routes, controllers, y utils.)
+```
 
-🧪 Pruebas
+(Opcionalmente puedes modularizar más adelante en carpetas como `routes`, `controllers`, y `utils`.)
+
+---
+
+## 🧪 Pruebas
+
 Puedes probar los endpoints utilizando herramientas como:
 
-Postman
+- [Postman](https://www.postman.com/)
+- [Thunder Client](https://www.thunderclient.com/) (extensión de VS Code)
+- curl desde la terminal
 
-Thunder Client (extensión de VS Code)
+---
 
-curl desde la terminal
+## 📬 Contacto
 
-📬 Contacto
-¿Tienes dudas o sugerencias? Escríbeme a: tu-email@ejemplo.com
-
+¿Tienes dudas o sugerencias? Escríbeme a: `tu-email@ejemplo.com`
